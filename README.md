@@ -11,7 +11,7 @@ This project is a simulation of an operating system that parses and interprets d
   - Output Blocked Queue (Contains processes trying to output something on the screen while another process is trying to do so)
 - Scheduler (Uses a scheduling algorithm to figure out which process should run)
 - Code Parser and Interpreter (Reads instructions from the text files and executes them)
-- Mutex (Once the currently running process requests access to a critical resource, it checks whether it is available or not, if it is available it assigns it as the current owner of this resource and marks it as busy until the same process releases the resource, if it is not available it is placed in the general blocked queue and the blocked queue of this resource)
+- Mutex (Once the currently running process requests access to a critical resource, it checks whether the resource is available or not, if it is available, the mutex assigns the process as the current owner of this resource and marks the resource as busy until the same process releases the resource, if it is not available, the process is placed in the general blocked queue and the blocked queue of this resource until the resource is released by its current owner)
 - Main Memory (40 blocks)
 - Disk
 
