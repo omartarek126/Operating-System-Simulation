@@ -30,7 +30,7 @@ The process control block is used by the operating system to store all the infor
 - Process ID (Unique and assigned once a process is created)
 - Process State (Running, Ready, Blocked)
 - Program Counter (Keep track of the next instruction to be executed within a process)
-- Memory Boundaries (Block address assigned for the process in memory)
+- Memory Boundaries (Block address range assigned for the process in memory)
 
 ## Scheduling Algorithm:
 Round robin is the scheduling algorithm used, which operates as follows:
