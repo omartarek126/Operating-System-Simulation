@@ -26,7 +26,7 @@ Each instruction executes in only 1 clock cycle except if it is a nested instruc
 - semSignal: to release a resource. Example: semSignal x, where x is the resource name
 
 ## Process Control Block (PCB):
-A process control block is a data structure used by the operating system to store all the information about a process such as:
+The process control block is used by the operating system to store all the information about a process such as:
 - Process ID (Unique and assigned once a process is created)
 - Process State (Running, Ready, Blocked)
 - Program Counter (Keep track of the next instruction to be executed within a process)
