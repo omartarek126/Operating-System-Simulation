@@ -2,6 +2,9 @@
 
 This project is a simulation of an operating system that parses and interprets different instructions, which are then bundled into different processes and executed. The OS has many features such as mutual exclusion over critical resources using mutexes, memory and disk management and process scheduling.
 
+## Technologies Used:
+- Java with an OOP approach
+
 ## OS Components:
 - 5 Queues:
   - Ready Queue (Contains processes ready to execute)
