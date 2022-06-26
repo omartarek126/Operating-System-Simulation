@@ -6,9 +6,9 @@ This project is a simulation of an operating system that parses and interprets d
 - 5 Queues:
   - Ready Queue (Contains processes ready to execute)
   - General Blocked Queue (Contains all processes trying to access any currently busy critical resource)
-  - File Access Blocked Queue (Contains all processes trying to access a file, to read or to write while it is already being used by another process)
-  - Input Blocked Queue (Contains all processes trying to take an input from the user while another process is trying to do so)
-  - Output Blocked Queue (Contains all processes trying to output something on the screen while another process is trying to do so)
+  - File Access Blocked Queue (Contains processes trying to access a file, to read or to write while it is already being used by another process)
+  - Input Blocked Queue (Contains processes trying to take an input from the user while another process is trying to do so)
+  - Output Blocked Queue (Contains processes trying to output something on the screen while another process is trying to do so)
 - Scheduler (Uses a scheduling algorithm to figure out which process should run)
 - Code Parser and Interpreter (Reads instructions from the text files and executes them)
 - Mutex (Once any process requests access to a critical resource, it checks whether it is available or not, if it is available it assigns it as the current owner of this resource and marks it as busy until the same process releases the resource, if it is not available it is placed in the general blocked queue and the blocked queue of this resource)
@@ -41,7 +41,7 @@ Round robin is the scheduling algorithm used, which operates as follows:
 5. If the currently running process completed all its instructions and no other processes are in the ready queue, then the OS has completed and terminates
 
 ## Memory and Disk Management:
-For any process to be able to execute, it must be currently saved on memory, but since the memory consists of only 40 block and each process occupies 20 blocks, Most Recently Finished (MRF) swapping algorithm is used to be able to swap different processes between memory and disk
+For any process to be able to execute, it must be currently saved on memory, but since the memory consists of only 40 blocks and each process occupies 20 blocks, Most Recently Finished (MRF) swapping algorithm is used to be able to swap different processes between memory and disk
 
 ## Memory<->Disk Swapping Algorithm:
 Since round robin scheduling algorithm is used where processes are executed in time slices in order of arrival, the most efficient swapping algorithm to be used is Most Recently Finished (MRF) which operates as follows:
